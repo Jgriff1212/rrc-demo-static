@@ -1,0 +1,39 @@
+{
+  "name": "reveal-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reveal - Task completion meets AI-generated art",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "mobile": "yarn workspace @reveal/mobile start",
+    "mobile:ios": "yarn workspace @reveal/mobile ios",
+    "mobile:android": "yarn workspace @reveal/mobile android",
+    "web": "yarn workspace @reveal/web dev",
+    "test": "yarn workspaces run test",
+    "lint": "yarn workspaces run lint",
+    "type-check": "yarn workspaces run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "supabase:start": "cd supabase && supabase start",
+    "supabase:stop": "cd supabase && supabase stop",
+    "supabase:status": "cd supabase && supabase status",
+    "supabase:db:reset": "cd supabase && supabase db reset"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.10",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  }
+}
